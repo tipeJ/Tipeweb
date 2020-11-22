@@ -1,5 +1,8 @@
 body {overflow: auto;}
 
+#content{
+    padding-top: 20px;
+}
 /* Hide validation, author, date */
 #postamble{
     visibility: hidden;
@@ -12,26 +15,26 @@ body {overflow: auto;}
 
 .outline-2{
     width: 100%;
-    margin-bottom: 50px;
 }
+
 #post-content{
     padding: 20px;
 }
 
 .outline-2 > h2 {
-    
     color: #3498db;
+    border-bottom: 1px solid #FFF;
 }
 
-.outline-3 > h3 {
-    
-    color: #20c997;
-}
+img {max-width: 90%;}
 
-.outline-4 > h4 {
-    
-    color: #98c44d;
-}
+/* .outline-3 > h3 { */
+/*     color: #186B19; */
+/* } */
+
+/* .outline-4 > h4 { */
+/*     color: #98c44d; */
+/* } */
 
 @media (min-width: 768px){
     body {overflow-x: hidden;}
@@ -39,35 +42,23 @@ body {overflow: auto;}
         padding-top: 40px;
         padding: 20px;
         display: grid;
-        grid-template-columns: [left] 350px [right] auto;
-        grid-template-rows: [headline] 75px [row-content] auto;
+        grid-template-columns: 350px auto;
+        grid-template-rows: 75px auto;
+        grid-template-areas:
+            "header   header"
+            "contents post";
     }
-    #title {
-        grid-column-start: right;
-        grid-column-end: right;
-        grid-row-start: headline;
-        grid-row-end: headline;
+    .title {
+        grid-area: header;
     }
     #table-of-contents{
         padding: 0px;
-        grid-column-start: left;
-        grid-column-end: left;
-        grid-row-start: headline;
-        grid-row-end: row-content;
+        margin-top: 75px;
+        position: fixed;
+        grid-area: contents;
     }
     #post-content{
         padding: 0px;
-        grid-column-start: right;
-        grid-column-end: right;
-        grid-row-start: row_content;
-        grid-row-end: row_content;
+        grid-area: post;
     }
-    /* .outline-2{ */
-    /*     flex: 2; */
-    /*     height: 100%; */
-    /*     top: 0; */
-    /*     overflow: auto; */
-    /*     padding-top: 20px; */
-    /*     right: 0; */
-    /* } */
 }
