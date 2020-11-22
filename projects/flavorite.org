@@ -1,0 +1,62 @@
+#+TITLE: Flavorite
+#+AUTHOR: Tiitus Järvinen
+
+* About
+
+Flavorite is a cross-platform application that displays flavors that go well together in the majority of dishes. The app contains recommendations for (almost) every flavor in existence.
+
+** Languages
+   Currently, the application supports only english, and this will likely not change, as the translation process would take a long time.
+   
+* Installation
+
+** Android
+   There are two types of Android releases:
+
+*** [[https://play.google.com/store/apps/details?id=com.tipej.FlavorApp][Google Play Store]]
+*** APK Installation
+    1. Go to the [[https://github.com/tipeJ/FlavorApp/releases.][Github releases page.]]
+    2. Download the APK package for your device architecture from the latest release.
+
+** Linux
+   An [[appimage.org][AppImage]] build is available on the [[github.com/tipej/releases/][releases page]].
+
+** Windows
+   Not yet available
+
+** iOS/MacOS
+   While flutter supports both iOS and MacOS, this application will most likely not be available for either platform any time soon, as I lack both Apple hardware and the will to run MacOS in a VM.
+
+* Usage
+
+  1. Install the software
+  2. Search and list of flavors for the one you need, either by scrolling or using the search bar.
+  3. The flavor details screen will display the most recommended flavor at the top of the list, leaving the less common (but still useful) recommendations at the bottom. You can change this sorting to alphabetical.
+
+You can flag the flavor as favourite by clicking the bookmark icon at the top of the details page, which adds the flavor to the favourites list, which can be accessed via the bottom navigation bar.
+
+* Building from source
+
+Clone the git repo, create a folder within called assets, in which you should add a .json file named flavordata. This file must contain the details of every flavor you want to include in a list format. You can supply this data by yourself, or by [[https://github.com/tipeJ/FlavorExtractor][running a parser.]] The choice is yours.
+
+** Source JSON Formatting
+#+BEGIN_SRC json
+  "Ingredients" : [
+      {
+      "ID": -- UNIQUE INTEGER ID HERE --,
+      "Name": "Random Ingredient 123",
+      "Techniques": [
+        "Braise",
+        "Bake"
+      ],
+      "Taste": "Sweet",
+      "Ingredients": {
+        "Pork": 3,
+        "Onions": 5,
+        "Garlic": 2,
+        "Tomatoes": 1,
+        "Lamb": 0
+      }
+    }
+  ]
+#+END_SRC

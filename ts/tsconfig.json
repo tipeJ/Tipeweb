@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "outDir": "../static/js"
+    }
+}
