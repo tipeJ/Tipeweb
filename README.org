@@ -1,6 +1,7 @@
-#+TITLE: Tipeweb
 #+AUTHOR: Tiitus Järvinen
 
 * About
 
-This is the source code for my personal website/portfolio.
+This is the source code for my personal website/portfolio. Built with Go, Bootstrap and a little bit of TypeScript.
+
+Pages written with org-mode.
