@@ -15,12 +15,12 @@ Flavorite is a cross-platform application that displays flavors that go well tog
 
 *** [[https://play.google.com/store/apps/details?id=com.tipej.FlavorApp][Google Play Store]]
 *** APK Installation
-    1. Go to the [[https://github.com/tipeJ/FlavorApp/releases.][Github releases page.]]
+    1. Go to the [[https://github.com/tipeJ/FlavorApp/releases][Github releases page.]]
     2. Download the APK package for your device architecture from the latest release.
 
 ** Linux
-   An [[appimage.org][AppImage]] build is available on the [[github.com/tipej/releases/][releases page]].
-
+   An [[https://www.appimage.org][AppImage]] build is available on the [[https://www.github.com/tipej/flavorapp/releases/][releases page]].
+   
 ** Windows
    Not yet available
 
