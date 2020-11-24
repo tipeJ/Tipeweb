@@ -6,13 +6,19 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/gorilla/mux"
 )
 
+func mainHandler(w http.ResponseWriter, r *http.Request) {
+	destination := mux.Vars(r)["destination"]
+
+	templ(destination).ExecuteTemplate(w, "layout", &Page{Title: strings.ToUpper(destination)})
+}
+
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Home")
 	templ("main").ExecuteTemplate(w, "layout", &Page{Title: "Welcome to Tipesss"})
 }
 
@@ -22,6 +28,7 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 	project := vars["project"]
 	projectTempl(project).ExecuteTemplate(w, "layout_project", &Page{Title: project})
 }
+
 func projectTempl(name string) *template.Template {
 	t := template.New("")
 	fmt.Println("templates/projects/" + name + ".html")
@@ -38,7 +45,6 @@ func templ(name string) *template.Template {
 	t := template.New("")
 	fmt.Println("templates/projects/" + name + ".html")
 	temp, err := t.ParseFiles("templates/layout.html", "templates/header.html", "templates/"+name+".html")
-
 	if err != nil {
 		fmt.Println(err)
 		panic(err)
@@ -56,7 +62,9 @@ func main() {
 		WriteTimeout: 10 * time.Second,
 	}
 	m.PathPrefix("/static/").Handler(http.StripPrefix("/static/", sfs))
+
 	m.HandleFunc("/", homeHandler)
+	m.HandleFunc("/{destination}/", mainHandler)
 	m.HandleFunc("/project/{project}/", projectsHandler)
 	m.HandleFunc("/shutdown", func(w http.ResponseWriter, r *http.Request) { s.Shutdown(context.Background()) })
 

@@ -9,16 +9,12 @@
             <script src="/static/js/projectui.js" ></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-            <link rel="stylesheet" href="/static/stylesheets/bootstrap.css">
             <link rel="stylesheet" href="/static/stylesheets/projects.css">
-
-            <title>.Title</title>
+            <link rel="stylesheet" href="/static/stylesheets/bootstrap.css">
         </head>
         <body>
             {{template "header" .}}
-            <div style="display:block, margin-top: 200px">
-                {{template "content" .}}
-            </div>
+            {{template "content" .}}
         </body>
     </html>
     {{end}}
