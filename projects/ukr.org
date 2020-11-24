@@ -1,0 +1,21 @@
+#+TITLE: UKR
+#+AUTHOR: Tiitus Järvinen
+
+* About
+
+  UKR (Universal Kodi Remote) is a Kodi remote application. It's built with Flutter, which gives it excellent cross-platform capabilities.
+
+  The reason I started developing this application is because I was tired of inconsistent and unintuitive UI across the Kodi remotes of different platforms that I use (Web, iPadOS, Android).
+
+** Languages
+   Currently being developed for english only. More language options may be added in the future.
+
+* Installation
+  
+  Currently no installation builds are available. Linux and Android will be first to be added.
+
+* Building from source
+
+  1. Clone the git repository to your computer.
+  2. Run /Pub Get Packages/ in the root directory of the repository.
+  3. Run the build command of you choice.
