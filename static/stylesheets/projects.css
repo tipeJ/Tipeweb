@@ -54,7 +54,9 @@ img {max-width: 90%;}
     #table-of-contents{
         padding: 0px;
         margin-top: 75px;
+        max-width: 350px;
         position: fixed;
+        text-overflow: clip;
         grid-area: contents;
     }
     #post-content{

@@ -13,9 +13,11 @@ import (
 )
 
 func mainHandler(w http.ResponseWriter, r *http.Request) {
-	destination := mux.Vars(r)["destination"]
+	vars := mux.Vars(r)
+	w.WriteHeader(http.StatusOK)
+	destination := vars["destination"]
 
-	templ(destination).ExecuteTemplate(w, "layout", &Page{Title: strings.ToUpper(destination)})
+	layoutTempl(destination).ExecuteTemplate(w, "layout_project", &Page{Title: strings.ToUpper(destination)})
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
@@ -33,6 +35,18 @@ func projectTempl(name string) *template.Template {
 	t := template.New("")
 	fmt.Println("templates/projects/" + name + ".html")
 	temp, err := t.ParseFiles("templates/layout_project.html", "templates/header.html", "templates/projects/"+name+".html")
+
+	if err != nil {
+		fmt.Println(err)
+		panic(err)
+	}
+	return temp
+}
+
+func layoutTempl(name string) *template.Template {
+	t := template.New("")
+	fmt.Println("templates/projects/" + name + ".html")
+	temp, err := t.ParseFiles("templates/layout_project.html", "templates/header.html", "templates/"+name+".html")
 
 	if err != nil {
 		fmt.Println(err)
