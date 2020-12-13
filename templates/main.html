@@ -1,8 +1,42 @@
 {{define "title"}}Front Page{{end}}
 {{define "content"}}
-<div class="content">
-    <h2>Main</h2>
-    <div>This is the Main page</div>
-</div>
+<html lang="en" >
+    <head>
+        <link rel="stylesheet" href="/static/stylesheets/about.css" >
+    </head>
+    <body>
+        <div id="content" >
+            <h1>About</h1>
+            <div>My name is Tiitus Järvinen, and this is my personal website. I live in Helsinki, and I'm a first-year student in Aalto University.</div>
+            <hr>
+            <div>
+                My major is Computer Science (Tietotekniikka), and I've been interested in computers and software since I could walk. This is where I showcase some of my side projects, the rest you can find on my GitHub.
+            </div>
+            <hr>
+            <h2>Some of my stuff</h2>
+            <div id="projects">
+                <div class="project-children">
+                    <a href="/project/flavorite/" >
+                        <h4>Flavorite</h4>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tipej.FlavorApp">
+                        <img src="/static/images/gplay.svg"/>
+                    </a>
+                    <a class="github-logo" href="https://www.github.com/tipej/FlavorApp">
+                        <img src="/static/images/github.svg"/>
+                    </a>
+                </div>
+                <div class="project-children">
+                    <a href="/project/ukr/" >
+                        <h4>UKR</h4>
+                    </a>
+                    <a class="github-logo" href="https://www.github.com/tipej/UKR">
+                        <img src="/static/images/github.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
 {{end}}
 

@@ -12,6 +12,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
+type Page struct {
+	Title string
+}
+
 func mainHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	w.WriteHeader(http.StatusOK)

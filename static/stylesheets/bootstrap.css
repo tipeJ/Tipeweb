@@ -33,7 +33,7 @@
   --warning: #f39c12;
   --danger: #e74c3c;
   --light: #adb5bd;
-  --dark: #303030;
+  --dark: #242729;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -68,7 +68,7 @@ body {
   line-height: 1.5;
   color: #fff;
   text-align: left;
-  background-color: #222;
+  background-color: #1A1D1E;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -3093,8 +3093,8 @@ fieldset:disabled a.btn {
 .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
 .show > .btn-outline-dark.dropdown-toggle {
   color: #fff;
-  background-color: #303030;
-  border-color: #303030;
+  background-color: #242729;
+  border-color: #242729;
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
@@ -4464,7 +4464,6 @@ input[type="button"].btn-block {
     padding-left: 0;
   }
 }
-
 @media (min-width: 768px) {
   .navbar-expand-md {
     -ms-flex-flow: row nowrap;
@@ -5903,7 +5902,7 @@ a.close.disabled {
   align-items: center;
   padding: 0.25rem 0.75rem;
   color: #888;
-  background-color: #303030;
+  background-color: #242729;
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top-left-radius: calc(0.25rem - 1px);
@@ -6405,7 +6404,7 @@ a.close.disabled {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 0.9375rem;
-  background-color: #444;
+  background-color: #242729;
   border-bottom: 1px solid #373737;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
@@ -10239,6 +10238,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .navbar {
     display: none;
+    background-color: #242729;
   }
   .badge {
     border: 1px solid #000;

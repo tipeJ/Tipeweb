@@ -36,7 +36,7 @@
 
 ** Ohjelmointikielet
    - Kotlin (Kattava)
-   - Dart (Flutterin yhteydessä) (Erinomainen)
+   - Dart (Flutter) (Erinomainen)
    - Scala (Erinomainen)
    - Java (Hyvä)
    - Python (Hyvä)
@@ -47,6 +47,7 @@
 
 ** Ohjelmistot
    - Linux
+   - Git
    - Adobe-perheen yleisimmät ohjelmistot, erityisesti Photoshop, After Effects, XD, Illustrator ja Premiere Pro.
    - Microsoft Office-perheen ohjelmistot
    - Affinity Designer
@@ -63,6 +64,7 @@
 
    Olen käyttänyt Linuxia päivittäin Windowssin ohella jo vuosia, ja kykenen työskentelemään terminaaliympäristössä sujuvasti.
 
+   Minulla on myös runsaasti kokemusta versionhallinnasta; olen käyttänyt Git-järjestelmää sekä omien projektieni hallintaan että suuremmissa tiimityöskentely-ympäristöissä.
    Hallitsen myös useimmat videoeditointiohjelmat, ja tein lukioaikoinani lukuisia koosteita koululleni.
 
 * Koulutus

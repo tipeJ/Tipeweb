@@ -1,0 +1,25 @@
+img {
+    width: 70px;
+    height: 70px;
+}
+
+#content {
+    padding: 20px;
+}
+#projects {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#projects * {
+    flex: 1;
+    text-align: center;
+}
+
+.project-children * {
+    padding: 5px;
+}
+
+.github-logo {
+    filter: invert(1);
+}
