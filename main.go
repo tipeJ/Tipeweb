@@ -74,7 +74,7 @@ func main() {
 	sfs := http.FileServer(http.Dir("./static"))
 	m := mux.NewRouter()
 	s := &http.Server{
-		Addr:         ":8080",
+		Addr:         ":" + os.Getenv("PORT"),
 		Handler:      m,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
