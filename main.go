@@ -26,7 +26,7 @@ func mainHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	templ("main").ExecuteTemplate(w, "layout", &Page{Title: "Welcome to Tipesss"})
+	templ("main").ExecuteTemplate(w, "layout", &Page{Title: "About"})
 }
 
 func projectsHandler(w http.ResponseWriter, r *http.Request) {
