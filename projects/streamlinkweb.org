@@ -1,0 +1,25 @@
+#+TITLE: Streamlink-Web
+#+AUTHOR: Tiitus Järvinen
+
+* About
+
+This is a web extension meant for launching streamlink streams in your favourite media player instead of the cluttered web UI.
+
+* Installation
+
+** Supported platforms
+   Currently only supports Chrome/Vivaldi on Windows. More platforms will be added in the future.
+   
+   Clone the [[https://www.github.com/tipeJ/Streamlink-Chrome][repository]] to your local files. Extract the host directory somewhere on the system and execute the install script.
+
+   Install the extension by entering the chrome extensions panel (ctr+shift+E) and select the install unpacked option. Navigate to the extracted repository location and select the "app" folder.
+
+* Usage
+
+  NOTE: You must have both python and streamlink installed, and both have to be on the system PATH environment variable.
+  
+  NOTE: This extension is still in the early phase, and not all features work as intended. You may currently need to reload the extension if errors occur in order to keep using it.
+
+  You can start the strema from either Youtube or Twitch. Click on the extension icon, click launch and select the desired quality when the popup appears. You can also add a preference for automatically selecting best quality streams.
+
+  Streamlink supports stream recording. This feature is still in the early phase in this application.
